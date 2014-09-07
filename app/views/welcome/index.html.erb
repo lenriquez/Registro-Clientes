@@ -1,0 +1,49 @@
+<div id = "main">
+<h1>Clientes</h1>
+<!-- Contact Table -->
+<table data-url="ajax.php?method=read" data-height="389" data-show-refresh="true"  data-search="true" data-toggle="table" id="table1" >
+   <thead>
+      <tr>
+         <th data-field="name" data-align="center">Name</th>
+         <th data-field="Cedula" data-align="center">Cedula</th>
+         <th data-field="id" data-visible="false" data-align="center">id</th>
+         <th data-field="operate" data-formatter="operateFormatter" data-events="operateEvents"
+            data-align="center">Opciones</th>
+      </tr>
+   </thead>
+</table>
+<button id = "new_contact" type="new" class="btn btn-default btn-right">Nuevo Cliente</button>
+<div>
+<!-- Create new contact form--> 
+<div id="dialog-form" title="Create Contact">
+   <p class="validateTips">Todos los campos son requeridos.</p>
+   <br/>
+   <form>
+      <fieldset>
+         <label for="name">Name </label>
+         <input type="text" name="name" id="name_form" value="" class="text ui-widget-content ui-corner-all"><br/>
+         <label for="email">Email</label>
+         <input type="text" name="email" id="email_form" value="" class="text ui-widget-content ui-corner-all">
+         <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+      </fieldset>
+   </form>
+</div>
+<!-- Edit new contact Form-->
+<div id="edit-form" title="Edit Contact">
+   <p class="validateTips">All form fields are required.</p>
+   <br/>
+   <form>
+      <fieldset>
+         <label for="name">Name </label>
+         <input type="text" name="name" id="edit_name_form" value="" class="text ui-widget-content ui-corner-all"><br/>
+         <label for="email">Email</label>
+         <input type="text" name="email" id="edit_email_form" value="" class="text ui-widget-content ui-corner-all">
+         <input type="hidden" name="email" id="edit_id_form" value="" class="text ui-widget-content ui-corner-all">
+         <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+      </fieldset>
+   </form>
+</div>
+<!-- Success save dialog -->
+<div id="dialog" title="Basic dialog">
+   <p>Your Information has been saved :)</p>
+</div>
